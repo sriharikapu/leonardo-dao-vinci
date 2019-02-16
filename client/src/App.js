@@ -8,8 +8,9 @@ import CounterUI from "./components/Counter/index.js";
 import Wallet from "./components/Wallet/index.js";
 import Instructions from "./components/Instructions/index.js";
 import { Loader } from 'rimble-ui';
-import Voter from './components/Voter/Voter'
-
+import Voter from './components/Voter/Voter';
+import {apiUrl }from './constants.js';
+import axios from 'axios';
 import styles from './App.module.scss';
 
 class App extends Component {
@@ -31,9 +32,17 @@ class App extends Component {
     return [];
   }
 
+  getIteration = ()=>{
+    axios
+  .get(`${apiUrl}/iteration`).then((response)=>(this.setState({iteration : response.data.iteration})))
+  }
+
   componentDidMount = async () => {
     let Counter = {};
     let Wallet = {};
+
+    this.getIteration();
+
     try {
       Counter = require("./contracts/Counter.json");
       Wallet = require("./contracts/Wallet.json");
@@ -236,7 +245,7 @@ class App extends Component {
   }
 
   renderVoter(){
-    return (<Voter />)
+    return (<Voter iteration={this.state.iteration}/>)
   }
 
   renderEVM() {

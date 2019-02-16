@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Card, Box, Flex, Image, Heading, TextButton } from "rimble-ui";
+import {apiUrl }from './../../constants';
 
 class CardsUI extends Component {
     constructor(props) {
@@ -9,7 +10,7 @@ class CardsUI extends Component {
 
   render() {
     return (
-      <Card
+      <Card key={this.props.num}
         width={"420px"}
         mx={"auto"}
         my={5}
@@ -25,7 +26,7 @@ class CardsUI extends Component {
       >
         <Image
           width={1}
-          src="https://source.unsplash.com/random/1280x720"
+          src={`${apiUrl}//images/1/${this.props.num}.png`}
           alt="random image from unsplash.com"
         />
         <Flex
@@ -50,14 +51,7 @@ export default class Voter extends Component {
   render() {
     return (
       <div style={{ height: "80vh", position: "relative" }}>
-        <CardsUI />
-        <CardsUI />
-        <CardsUI />
-        <CardsUI />
-        <CardsUI />
-        <CardsUI />
-        <CardsUI />
-        <CardsUI />
+      {[1,2,3].map((num)=>(<CardsUI num={num}/>))}
       </div>
     );
   }
