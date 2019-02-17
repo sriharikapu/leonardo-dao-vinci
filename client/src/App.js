@@ -10,6 +10,7 @@ import {apiUrl }from './constants.js';
 import styles from './App.module.scss';
 import Profile from './components/Profile/Profile.js';
 import Team from './components/Team/Team.js';
+import axios from 'axios'
 
 class App extends Component {
   state = {
