@@ -11,14 +11,14 @@
     "absolutePath": "/Users/stephenjackson/Code/Ethereum/leonardo-dao-vinci/contracts/OwnableDelegateProxy.sol",
     "exportedSymbols": {
       "OwnableDelegateProxy": [
-        331
+        339
       ]
     },
-    "id": 332,
+    "id": 340,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 330,
+        "id": 338,
         "literals": [
           "solidity",
           "^",
@@ -34,14 +34,14 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 331,
+        "id": 339,
         "linearizedBaseContracts": [
-          331
+          339
         ],
         "name": "OwnableDelegateProxy",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 332,
+        "scope": 340,
         "src": "25:33:3"
       }
     ],
@@ -51,14 +51,14 @@
     "absolutePath": "/Users/stephenjackson/Code/Ethereum/leonardo-dao-vinci/contracts/OwnableDelegateProxy.sol",
     "exportedSymbols": {
       "OwnableDelegateProxy": [
-        331
+        339
       ]
     },
-    "id": 332,
+    "id": 340,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 330,
+        "id": 338,
         "literals": [
           "solidity",
           "^",
@@ -74,14 +74,14 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 331,
+        "id": 339,
         "linearizedBaseContracts": [
-          331
+          339
         ],
         "name": "OwnableDelegateProxy",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 332,
+        "scope": 340,
         "src": "25:33:3"
       }
     ],
@@ -93,7 +93,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.2",
-  "updatedAt": "2019-02-17T07:28:45.649Z",
+  "updatedAt": "2019-02-17T11:22:33.371Z",
   "devdoc": {
     "methods": {}
   },

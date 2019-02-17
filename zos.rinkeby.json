@@ -264,11 +264,11 @@
       }
     },
     "DaoVinci": {
-      "address": "0x6E3BeD020eC292E4CA9e4F8Ac610Eb73A024D7bd",
-      "constructorCode": "608060405234801561001057600080fd5b50610f0a806100206000396000f3fe",
-      "bodyBytecodeHash": "9c1032873c5aa2685ba69223190a7f8dddc00f41d75bc8a8013aefdead896f13",
-      "localBytecodeHash": "42edbd46502ac8dff48aa39edd56d7b3d97a02573dd8492a8210c8d5f45a73b1",
-      "deployedBytecodeHash": "42edbd46502ac8dff48aa39edd56d7b3d97a02573dd8492a8210c8d5f45a73b1",
+      "address": "0xD8ce6E36fa78308bd5BDC9382f6913921C808FFE",
+      "constructorCode": "608060405234801561001057600080fd5b50610df4806100206000396000f3fe",
+      "bodyBytecodeHash": "d4ac46be03b92af7376818022c548c612b26d9e8046d6e22795837024aeb2a96",
+      "localBytecodeHash": "df5f0afcd54c7ed9ecf41ec66fbcaccfda02cffbadba56e3d1d934537e3efa41",
+      "deployedBytecodeHash": "df5f0afcd54c7ed9ecf41ec66fbcaccfda02cffbadba56e3d1d934537e3efa41",
       "types": {
         "t_bool": {
           "id": "t_bool",
@@ -304,7 +304,7 @@
           "contract": "Initializable",
           "path": "zos-lib/contracts/Initializable.sol",
           "label": "initialized",
-          "astId": 1944,
+          "astId": 1952,
           "type": "t_bool",
           "src": "757:24:20"
         },
@@ -312,7 +312,7 @@
           "contract": "Initializable",
           "path": "zos-lib/contracts/Initializable.sol",
           "label": "initializing",
-          "astId": 1946,
+          "astId": 1954,
           "type": "t_bool",
           "src": "876:25:20"
         },
@@ -320,7 +320,7 @@
           "contract": "Initializable",
           "path": "zos-lib/contracts/Initializable.sol",
           "label": "______gap",
-          "astId": 1995,
+          "astId": 2003,
           "type": "t_array:50<t_uint256>",
           "src": "1891:29:20"
         },
@@ -328,7 +328,7 @@
           "contract": "Ownable",
           "path": "openzeppelin-eth/contracts/ownership/Ownable.sol",
           "label": "_owner",
-          "astId": 787,
+          "astId": 795,
           "type": "t_address",
           "src": "302:22:11"
         },
@@ -336,7 +336,7 @@
           "contract": "Ownable",
           "path": "openzeppelin-eth/contracts/ownership/Ownable.sol",
           "label": "______gap",
-          "astId": 898,
+          "astId": 906,
           "type": "t_array:50<t_uint256>",
           "src": "2186:29:11"
         },
@@ -344,9 +344,9 @@
           "contract": "DaoVinci",
           "path": "contracts/DaoVinci.sol",
           "label": "balances",
-          "astId": 83,
+          "astId": 78,
           "type": "t_mapping<t_uint256>",
-          "src": "377:40:1"
+          "src": "296:40:1"
         }
       ],
       "warnings": {
@@ -354,7 +354,9 @@
         "hasSelfDestruct": false,
         "hasDelegateCall": false,
         "hasInitialValuesInDeclarations": false,
-        "uninitializedBaseContracts": []
+        "uninitializedBaseContracts": [],
+        "storageUncheckedVars": [],
+        "storageDiff": []
       }
     }
   },
@@ -371,7 +373,7 @@
       {
         "address": "0x0c8184B22De509115A1ef19947A7B32683717dB4",
         "version": "0.1.0",
-        "implementation": "0x6E3BeD020eC292E4CA9e4F8Ac610Eb73A024D7bd"
+        "implementation": "0xD8ce6E36fa78308bd5BDC9382f6913921C808FFE"
       }
     ]
   },

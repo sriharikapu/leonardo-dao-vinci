@@ -31,14 +31,14 @@
     "absolutePath": "/Users/stephenjackson/Code/Ethereum/leonardo-dao-vinci/contracts/ProxyRegistry.sol",
     "exportedSymbols": {
       "ProxyRegistry": [
-        339
+        347
       ]
     },
-    "id": 340,
+    "id": 348,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 333,
+        "id": 341,
         "literals": [
           "solidity",
           "^",
@@ -51,10 +51,10 @@
       {
         "absolutePath": "/Users/stephenjackson/Code/Ethereum/leonardo-dao-vinci/contracts/OwnableDelegateProxy.sol",
         "file": "./OwnableDelegateProxy.sol",
-        "id": 334,
+        "id": 342,
         "nodeType": "ImportDirective",
-        "scope": 340,
-        "sourceUnit": 332,
+        "scope": 348,
+        "sourceUnit": 340,
         "src": "25:36:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -65,30 +65,30 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 339,
+        "id": 347,
         "linearizedBaseContracts": [
-          339
+          347
         ],
         "name": "ProxyRegistry",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 338,
+            "id": 346,
             "name": "proxies",
             "nodeType": "VariableDeclaration",
-            "scope": 339,
+            "scope": 347,
             "src": "92:55:4",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_address_$_t_contract$_OwnableDelegateProxy_$331_$",
+              "typeIdentifier": "t_mapping$_t_address_$_t_contract$_OwnableDelegateProxy_$339_$",
               "typeString": "mapping(address => contract OwnableDelegateProxy)"
             },
             "typeName": {
-              "id": 337,
+              "id": 345,
               "keyType": {
-                "id": 335,
+                "id": 343,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "100:7:4",
@@ -100,18 +100,18 @@
               "nodeType": "Mapping",
               "src": "92:40:4",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_address_$_t_contract$_OwnableDelegateProxy_$331_$",
+                "typeIdentifier": "t_mapping$_t_address_$_t_contract$_OwnableDelegateProxy_$339_$",
                 "typeString": "mapping(address => contract OwnableDelegateProxy)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 336,
+                "id": 344,
                 "name": "OwnableDelegateProxy",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 331,
+                "referencedDeclaration": 339,
                 "src": "111:20:4",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_contract$_OwnableDelegateProxy_$331",
+                  "typeIdentifier": "t_contract$_OwnableDelegateProxy_$339",
                   "typeString": "contract OwnableDelegateProxy"
                 }
               }
@@ -120,7 +120,7 @@
             "visibility": "public"
           }
         ],
-        "scope": 340,
+        "scope": 348,
         "src": "63:87:4"
       }
     ],
@@ -130,14 +130,14 @@
     "absolutePath": "/Users/stephenjackson/Code/Ethereum/leonardo-dao-vinci/contracts/ProxyRegistry.sol",
     "exportedSymbols": {
       "ProxyRegistry": [
-        339
+        347
       ]
     },
-    "id": 340,
+    "id": 348,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 333,
+        "id": 341,
         "literals": [
           "solidity",
           "^",
@@ -150,10 +150,10 @@
       {
         "absolutePath": "/Users/stephenjackson/Code/Ethereum/leonardo-dao-vinci/contracts/OwnableDelegateProxy.sol",
         "file": "./OwnableDelegateProxy.sol",
-        "id": 334,
+        "id": 342,
         "nodeType": "ImportDirective",
-        "scope": 340,
-        "sourceUnit": 332,
+        "scope": 348,
+        "sourceUnit": 340,
         "src": "25:36:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -164,30 +164,30 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 339,
+        "id": 347,
         "linearizedBaseContracts": [
-          339
+          347
         ],
         "name": "ProxyRegistry",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 338,
+            "id": 346,
             "name": "proxies",
             "nodeType": "VariableDeclaration",
-            "scope": 339,
+            "scope": 347,
             "src": "92:55:4",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_address_$_t_contract$_OwnableDelegateProxy_$331_$",
+              "typeIdentifier": "t_mapping$_t_address_$_t_contract$_OwnableDelegateProxy_$339_$",
               "typeString": "mapping(address => contract OwnableDelegateProxy)"
             },
             "typeName": {
-              "id": 337,
+              "id": 345,
               "keyType": {
-                "id": 335,
+                "id": 343,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "100:7:4",
@@ -199,18 +199,18 @@
               "nodeType": "Mapping",
               "src": "92:40:4",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_address_$_t_contract$_OwnableDelegateProxy_$331_$",
+                "typeIdentifier": "t_mapping$_t_address_$_t_contract$_OwnableDelegateProxy_$339_$",
                 "typeString": "mapping(address => contract OwnableDelegateProxy)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 336,
+                "id": 344,
                 "name": "OwnableDelegateProxy",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 331,
+                "referencedDeclaration": 339,
                 "src": "111:20:4",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_contract$_OwnableDelegateProxy_$331",
+                  "typeIdentifier": "t_contract$_OwnableDelegateProxy_$339",
                   "typeString": "contract OwnableDelegateProxy"
                 }
               }
@@ -219,7 +219,7 @@
             "visibility": "public"
           }
         ],
-        "scope": 340,
+        "scope": 348,
         "src": "63:87:4"
       }
     ],
@@ -231,7 +231,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.2",
-  "updatedAt": "2019-02-17T07:28:45.650Z",
+  "updatedAt": "2019-02-17T11:22:33.372Z",
   "devdoc": {
     "methods": {}
   },
