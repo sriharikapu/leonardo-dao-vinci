@@ -11,6 +11,7 @@ import (
 	"log"
 	"math/big"
 	"net/http"
+	"net/url"
 	"os"
 	"sort"
 	"strconv"
@@ -43,6 +44,7 @@ var (
 	privateKey              *ecdsa.PrivateKey
 	generatorAccountAddress common.Address
 	nonce                   uint64
+	lastBlock               uint64
 )
 
 type voteMessage struct {
@@ -71,7 +73,18 @@ func main() {
 
 	}
 
+	content, err = ioutil.ReadFile("lastBlock")
+	if err == nil {
+		var err error
+		lastBlock, err = strconv.ParseUint(string(content), 10, 64)
+		if err != nil {
+			log.Fatalf("expecting integer defined in lastBlock file, instead got %s", string(content))
+		}
+
+	}
+
 	setupEth()
+
 	go generateArt()
 
 	imageHandler := http.StripPrefix("/images/", http.FileServer(http.Dir("images")))
@@ -135,6 +148,41 @@ func generateArt() {
 		fmt.Printf("Press enter to move to the next iteration\n")
 		// hard code minting
 		fmt.Scanln()
+		// Check for payments to this account
+
+		addressString := generatorAccountAddress.String()
+		trs, err := GetTransactions(addressString, lastBlock)
+		if err != nil {
+			fmt.Printf("failed to retrieve transactions from infura: %v\n", err)
+		}
+
+		for _, t := range trs.Result {
+
+			// Update our last block
+			// TODO persist in file
+			bn, err := strconv.ParseUint(t.BlockNumber, 10, 64)
+			if err != nil {
+				fmt.Printf("got bad block number from infura: %s\n", t.BlockNumber)
+				continue
+			}
+
+			lastBlock = bn
+
+			err = ioutil.WriteFile("lastBlock", []byte(t.BlockNumber), os.ModePerm)
+			if err != nil {
+				fmt.Printf("could not persist lastBlock file: %v", err)
+			}
+
+			// look for transactions into our address
+			if t.To == addressString {
+				fmt.Printf("transaction to us from %s\n", t.From)
+			} else {
+				fmt.Printf("from us to %s isError %s receiptStatus %s\n", t.To, t.IsError, t.TxreceiptStatus)
+			}
+		}
+
+		fmt.Printf("lastBlock %d\n", lastBlock)
+
 		// Calculate winners
 		imageIDs := make([]int, imageCount)
 		// generate the image ids
@@ -155,6 +203,62 @@ func generateArt() {
 
 }
 
+type Transactions struct {
+	Status  string `json:"status"`
+	Message string `json:"message"`
+	Result  []struct {
+		BlockNumber       string `json:"blockNumber"`
+		TimeStamp         string `json:"timeStamp"`
+		Hash              string `json:"hash"`
+		Nonce             string `json:"nonce"`
+		BlockHash         string `json:"blockHash"`
+		TransactionIndex  string `json:"transactionIndex"`
+		From              string `json:"from"`
+		To                string `json:"to"`
+		Value             string `json:"value"`
+		Gas               string `json:"gas"`
+		GasPrice          string `json:"gasPrice"`
+		IsError           string `json:"isError"`
+		TxreceiptStatus   string `json:"txreceipt_status"`
+		Input             string `json:"input"`
+		ContractAddress   string `json:"contractAddress"`
+		CumulativeGasUsed string `json:"cumulativeGasUsed"`
+		GasUsed           string `json:"gasUsed"`
+		Confirmations     string `json:"confirmations"`
+	} `json:"result"`
+}
+
+func GetTransactions(address string, startBlock uint64) (*Transactions, error) {
+	//"http://api-rinkeby.etherscan.io/api?module=account&action=txlist&address=0xf0F2077bC2361AF6Ae805609111c2b7F1594A74b&startblock=0&endblock=99999999&sort=desc&apikey=YourApiKeyToken"
+
+	v := url.Values{}
+	v.Set("module", "account")
+	v.Add("action", "txlist")
+	v.Add("address", address)
+	v.Add("startblock", strconv.FormatInt(int64(startBlock), 10))
+	v.Add("endblock", "99999999")
+	v.Add("sort", "asc")
+	v.Add("apikey", "YourApiKeyToken")
+	url := "http://api-rinkeby.etherscan.io/api?" + v.Encode()
+	println(url)
+	resp, err := http.Get(url)
+	if err != nil {
+		return nil, fmt.Errorf("failed to collect transactions: %v", err)
+	}
+	defer resp.Body.Close()
+	data, err := ioutil.ReadAll(resp.Body)
+	if err != nil {
+		return nil, fmt.Errorf("failed to read transactions response body: %v", err)
+	}
+
+	trs := &Transactions{}
+	err = json.Unmarshal(data, trs)
+	if err != nil {
+		return nil, fmt.Errorf("failed to unmarshal transactions response body: %v", err)
+	}
+
+	return trs, nil
+}
 func addCors(handleFunc func(w http.ResponseWriter, r *http.Request)) func(http.ResponseWriter, *http.Request) {
 	return func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Access-Control-Allow-Origin", "*")
