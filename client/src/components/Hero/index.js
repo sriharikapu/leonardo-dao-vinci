@@ -19,9 +19,13 @@ export default class Hero extends Component {
       <div className={styles.Hero} style={{backgroundImage : `url(${genArt})` }}>
         <div className={styles.hwrapper}>
           <div className={styles.left} style={{ backgroundColor : 'cadetblue',color: "black"}}>
-            <h1> Computer Gene[Rated] Art</h1>
+            <h1 style={{ padding: "20px", fontWeight : "900"}}> Join the Machine Art Revolution!</h1>
             <h2 style={{ color: "black"}}>
-              Join us in rating computer generated art. We mint the most popular as digital collectibles, and share the eth with our users.
+              Vote for computer generated art. 
+              The autonomous Dao Vinci art collective mints and sells select pieces as unique
+              digital collectibles. 
+              Profits are shared with all! 
+              {/* Join us in rating computer generated art. We mint the most popular as digital collectibles, and share the eth with our users. */}
             </h2>
             {/* <div className={styles.sellingpoints}>
               <div className={styles.feature}>

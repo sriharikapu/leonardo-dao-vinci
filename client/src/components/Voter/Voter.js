@@ -14,6 +14,11 @@ class CardsUI extends Component {
     this.setState({ leftPosition: "10000px" })
     this.props.rightClick(this.props.num)
   }
+  
+  handleClickLeft = ()=>{
+    this.setState({ leftPosition: "-10000px" })
+    this.props.leftClick(this.props.num)
+  }
 
   render() {
     return (
@@ -45,7 +50,7 @@ class CardsUI extends Component {
           style={{ height: "100px" }}
         >
           <TextButton
-            onClick={() => this.setState({ leftPosition: "-10000px" })}
+            onClick={this.handleClickLeft}
             p={"0"}
             mr={4}
             height={"auto"}
@@ -59,7 +64,7 @@ class CardsUI extends Component {
             style={{ marginLeft: "auto" }}
             on
           >
-            <i class="fas fa-heart fa-3x"></i>
+            <i className="fas fa-heart fa-3x"></i>
           </TextButton>
         </Flex>
       </Card>
@@ -83,6 +88,12 @@ export default class Voter extends Component {
     request.send(JSON.stringify(data));
   }
 
+  leftClick = (artId) => {
+    if (artId === 1 ){
+        this.sendVotes()
+    }
+  }
+
   rightClick = (artId)=>{
         const likes= Object.assign([],[], this.state.likes)
         const newLikes = likes.push(artId)
@@ -100,7 +111,8 @@ export default class Voter extends Component {
         {[1,2,3,4,5,6, 7, 8, 9, 10].map(num => {
             return( <CardsUI    key={num}
                                 num={num} 
-                                rightClick={this.rightClick} 
+                                rightClick={this.rightClick}
+                                leftClick={this.leftClick} 
                                 sendVotes={this.sendVotes} />)
             }
         )}

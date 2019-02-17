@@ -10,6 +10,7 @@ import {apiUrl }from './constants.js';
 import axios from 'axios';
 import styles from './App.module.scss';
 import Profile from './components/Profile/Profile.js';
+import Team from './components/Team/Team.js';
 
 class App extends Component {
   state = {
@@ -192,6 +193,10 @@ class App extends Component {
     )
   }
 
+  renderTeam = () => {
+    return (<Team />)
+  }
+
   renderInstructions() {
     return (
       <div className={styles.wrapper}>
@@ -216,6 +221,7 @@ class App extends Component {
           {this.state.route === '' && this.renderInstructions()}
           {this.state.route === 'vote' && this.renderVoter()}
           {this.state.route === 'profile' && this.renderProfile()}
+          {this.state.route === "team" && this.renderTeam()}
         <Footer />
       </div>
     );
