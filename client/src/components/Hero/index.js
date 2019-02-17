@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styles from './Hero.module.scss';
 import cx from 'classnames';
 import logos from './pic_bg.png';
+import genArt from './../../images/gen-1.png'
 
 export default class Hero extends Component {
 
@@ -15,15 +16,14 @@ export default class Hero extends Component {
   }
   render()  {
     return (
-      <div className={styles.Hero}>
+      <div className={styles.Hero} style={{backgroundImage : `url(${genArt})` }}>
         <div className={styles.hwrapper}>
-          <div className={styles.left}>
-            <h1> Welcome to ZepKit! </h1>
-            <h2>
-              The easiest way to build a Web3 application with the
-              most trusted tools in Ethereum.
+          <div className={styles.left} style={{ backgroundColor : 'cadetblue',color: "black"}}>
+            <h1> Computer Gene[Rated] Art</h1>
+            <h2 style={{ color: "black"}}>
+              Join us in rating computer generated art. We mint the most popular as digital collectibles, and share the eth with our users.
             </h2>
-            <div className={styles.sellingpoints}>
+            {/* <div className={styles.sellingpoints}>
               <div className={styles.feature}>
                 - Includes <a
                   target="_blank"
@@ -69,11 +69,11 @@ export default class Hero extends Component {
                 href="https://github.com/zeppelinos/zepkit">
                > View code on github
               </a>
-            </div>
+            </div> */}
           </div>
-          <div className={styles.right}>
+          {/* <div className={styles.right}>
             <img alt="Zepkit" src={logos} />
-          </div>
+          </div> */}
         </div>
       </div>
     );

@@ -97,14 +97,14 @@ export default class Instructions extends Component {
     if (!isProd) {
       return (
         <div className={styles.instructions}>
-          <h1> ZepKit is running! </h1>
+          {/* <h1> ZepKit is running! </h1>
           <div className={styles.step}>
             <div className={styles.instruction}>
               Congratulations! Your application is correctly setup.
               Now, let's go through the tutorials to play with the basics.
               Visit the <a href='/counter'> Counter</a> page to deploy and interact with your first contract.
             </div>
-          </div>
+          </div> */}
         </div>
       );
     }
