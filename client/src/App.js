@@ -245,7 +245,7 @@ class App extends Component {
   }
 
   renderVoter(){
-    return (<Voter iteration={this.state.iteration}/>)
+    return (<Voter iteration={this.state.iteration} account={this.state.accounts && this.state.accounts[0]}/>)
   }
 
   renderEVM() {
