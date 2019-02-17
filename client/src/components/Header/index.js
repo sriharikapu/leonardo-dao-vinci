@@ -12,7 +12,8 @@ const Header = () => (
       </div>
       <ul>
       <li><a style={{ color : 'black'}} href="/vote" className={styles.link}> Vote</a></li>
-        <li><a style={{ color : 'black'}} href="/about" className={styles.link}> About</a></li>
+      <li><a style={{ color : 'black'}} href="/profile" className={styles.link}> Profile</a></li>
+      <li><a style={{ color : 'black'}} href="/about" className={styles.link}> About</a></li>
       </ul>
     </nav>
   </div>
