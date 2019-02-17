@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Card, Box, Flex, Image, Heading, TextButton } from "rimble-ui";
 import { apiUrl } from "./../../constants";
 
+
+const roundNumber = 6;
 class CardsUI extends Component {
   constructor(props) {
     super(props);
@@ -16,7 +18,7 @@ class CardsUI extends Component {
   render() {
     return (
       <Card
-        key={this.props.num}
+        key={`key-${this.props.num}`}
         width={"420px"}
         mx={"auto"}
         my={5}
@@ -67,21 +69,40 @@ class CardsUI extends Component {
 export default class Voter extends Component {
   constructor(props) {
     super(props);
-    this.state = { likes: [] };
+    this.state = { likes: [], roundLength : 6 };
+  }
+  //TODO remove random from user_address
+  sendVotes = ()=>{
+    const data = {
+                    "images" : this.state.likes,
+                    "user_address" : this.props.account + Math.random(),
+                    "iteration" : 1
+                 }
+    var request = new XMLHttpRequest();
+    request.open('POST', `${apiUrl}/vote`, true);
+    request.send(JSON.stringify(data));
   }
 
   rightClick = (artId)=>{
         const likes= Object.assign([],[], this.state.likes)
         const newLikes = likes.push(artId)
-        this.setState({likes  })
+        this.setState({likes  }, ()=>{
+            if(artId === 1){
+                this.sendVotes()
+            }
+        })
   }
 
   render() {
+    //TODO remove hardcoded num array
     return (
       <div style={{ height: "80vh", position: "relative" }}>
-        {[1, 2, 3, 4, 5, 6].map(num => (
-          <CardsUI num={num} rightClick={this.rightClick} />
-        ))}
+        {[1,2,3,4,5,6].map(num => {
+            return( <CardsUI    num={num} 
+                                rightClick={this.rightClick} 
+                                sendVotes={this.sendVotes} />)
+            }
+        )}
       </div>
     );
   }
