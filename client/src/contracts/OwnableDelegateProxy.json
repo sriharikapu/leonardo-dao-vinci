@@ -1,0 +1,103 @@
+{
+  "contractName": "OwnableDelegateProxy",
+  "abi": [],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3fe6080604052600080fdfea165627a7a72305820000b91e5de3ccad793048dcb061833627461cce5fff229b46b68ce6d675b87470029",
+  "deployedBytecode": "0x6080604052600080fdfea165627a7a72305820000b91e5de3ccad793048dcb061833627461cce5fff229b46b68ce6d675b87470029",
+  "sourceMap": "25:33:3:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:33:3;;;;;;;",
+  "deployedSourceMap": "25:33:3:-;;;;;",
+  "source": "pragma solidity ^0.5.0;\n\ncontract OwnableDelegateProxy {\n}\n",
+  "sourcePath": "/Users/stephenjackson/Code/Ethereum/leonardo-dao-vinci/contracts/OwnableDelegateProxy.sol",
+  "ast": {
+    "absolutePath": "/Users/stephenjackson/Code/Ethereum/leonardo-dao-vinci/contracts/OwnableDelegateProxy.sol",
+    "exportedSymbols": {
+      "OwnableDelegateProxy": [
+        175
+      ]
+    },
+    "id": 176,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 174,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:3"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 175,
+        "linearizedBaseContracts": [
+          175
+        ],
+        "name": "OwnableDelegateProxy",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 176,
+        "src": "25:33:3"
+      }
+    ],
+    "src": "0:59:3"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/stephenjackson/Code/Ethereum/leonardo-dao-vinci/contracts/OwnableDelegateProxy.sol",
+    "exportedSymbols": {
+      "OwnableDelegateProxy": [
+        175
+      ]
+    },
+    "id": 176,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 174,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:3"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 175,
+        "linearizedBaseContracts": [
+          175
+        ],
+        "name": "OwnableDelegateProxy",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 176,
+        "src": "25:33:3"
+      }
+    ],
+    "src": "0:59:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.2",
+  "updatedAt": "2019-02-16T19:56:22.120Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

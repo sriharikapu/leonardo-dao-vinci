@@ -1,0 +1,19 @@
+{
+  "name": "openseaintegration",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@0x/subproviders": "^2.1.4",
+    "opensea-js": "latest"
+  },
+  "engines": {
+    "node": "8.11.x",
+    "npm": "5.6.x"
+  }
+}

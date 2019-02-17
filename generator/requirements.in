@@ -1,0 +1,5 @@
+grin==1.2.1
+requests==2.21.0
+PyHamcrest==1.9.0
+argparse==1.4.0
+cairocffi==1.0.2

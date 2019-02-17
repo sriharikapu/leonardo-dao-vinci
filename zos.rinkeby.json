@@ -1,0 +1,282 @@
+{
+  "contracts": {
+    "ProxyRegistry": {
+      "address": "0x4e15b7131F52571E8bbc65D0f3D40fF27447Ad67",
+      "constructorCode": "608060405234801561001057600080fd5b50610136806100206000396000f3fe",
+      "bodyBytecodeHash": "974c738d66f7429541c37d255e7fa9c4b4d8dc364e49dab4f56461770ce375a2",
+      "localBytecodeHash": "3db6406995eb2611da72178380b0a71c90fb8b0224613b091a7b3eca500261a0",
+      "deployedBytecodeHash": "3db6406995eb2611da72178380b0a71c90fb8b0224613b091a7b3eca500261a0",
+      "types": {
+        "t_address": {
+          "id": "t_address",
+          "kind": "elementary",
+          "label": "address"
+        },
+        "t_mapping<t_address>": {
+          "id": "t_mapping<t_address>",
+          "valueType": "t_address",
+          "label": "mapping(key => address)",
+          "kind": "mapping"
+        }
+      },
+      "storage": [
+        {
+          "contract": "ProxyRegistry",
+          "path": "contracts/ProxyRegistry.sol",
+          "label": "proxies",
+          "astId": 182,
+          "type": "t_mapping<t_address>",
+          "src": "92:55:4"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": []
+      }
+    },
+    "DaoVinciToken": {
+      "address": "0xd2dD37Df1520f107473DE13700b399154a54CC43",
+      "constructorCode": "608060405234801561001057600080fd5b50612c25806100206000396000f3fe",
+      "bodyBytecodeHash": "6cbc532ff314a40d0a270b28e442a2c70bc8251619baa748e12edf689886b157",
+      "localBytecodeHash": "4121e41ad3ed4a31446e2469598c5e0ab84d9ca63ba317cf147ee60671a8187e",
+      "deployedBytecodeHash": "4121e41ad3ed4a31446e2469598c5e0ab84d9ca63ba317cf147ee60671a8187e",
+      "types": {
+        "t_bool": {
+          "id": "t_bool",
+          "kind": "elementary",
+          "label": "bool"
+        },
+        "t_uint256": {
+          "id": "t_uint256",
+          "kind": "elementary",
+          "label": "uint256"
+        },
+        "t_array:50<t_uint256>": {
+          "id": "t_array:50<t_uint256>",
+          "valueType": "t_uint256",
+          "length": "50",
+          "kind": "array",
+          "label": "uint256[50]"
+        },
+        "t_mapping<t_bool>": {
+          "id": "t_mapping<t_bool>",
+          "valueType": "t_bool",
+          "label": "mapping(key => bool)",
+          "kind": "mapping"
+        },
+        "t_address": {
+          "id": "t_address",
+          "kind": "elementary",
+          "label": "address"
+        },
+        "t_mapping<t_address>": {
+          "id": "t_mapping<t_address>",
+          "valueType": "t_address",
+          "label": "mapping(key => address)",
+          "kind": "mapping"
+        },
+        "t_mapping<t_uint256>": {
+          "id": "t_mapping<t_uint256>",
+          "valueType": "t_uint256",
+          "label": "mapping(key => uint256)",
+          "kind": "mapping"
+        },
+        "t_string": {
+          "id": "t_string",
+          "kind": "elementary",
+          "label": "string"
+        },
+        "t_mapping<t_string>": {
+          "id": "t_mapping<t_string>",
+          "valueType": "t_string",
+          "label": "mapping(key => string)",
+          "kind": "mapping"
+        },
+        "t_struct<Roles.Role>": {
+          "id": "t_struct<Roles.Role>",
+          "kind": "struct",
+          "label": "Roles.Role",
+          "members": [
+            {
+              "label": "bearer",
+              "astId": 219,
+              "type": "t_mapping<t_bool>",
+              "src": "150:32:6"
+            }
+          ]
+        }
+      },
+      "storage": [
+        {
+          "contract": "Initializable",
+          "path": "zos-lib/contracts/Initializable.sol",
+          "label": "initialized",
+          "astId": 1788,
+          "type": "t_bool",
+          "src": "757:24:20"
+        },
+        {
+          "contract": "Initializable",
+          "path": "zos-lib/contracts/Initializable.sol",
+          "label": "initializing",
+          "astId": 1790,
+          "type": "t_bool",
+          "src": "876:25:20"
+        },
+        {
+          "contract": "Initializable",
+          "path": "zos-lib/contracts/Initializable.sol",
+          "label": "______gap",
+          "astId": 1839,
+          "type": "t_array:50<t_uint256>",
+          "src": "1891:29:20"
+        },
+        {
+          "contract": "ERC165",
+          "path": "openzeppelin-eth/contracts/introspection/ERC165.sol",
+          "label": "_supportedInterfaces",
+          "astId": 441,
+          "type": "t_mapping<t_bool>",
+          "src": "497:52:8"
+        },
+        {
+          "contract": "ERC165",
+          "path": "openzeppelin-eth/contracts/introspection/ERC165.sol",
+          "label": "______gap",
+          "astId": 485,
+          "type": "t_array:50<t_uint256>",
+          "src": "1230:29:8"
+        },
+        {
+          "contract": "ERC721",
+          "path": "openzeppelin-eth/contracts/token/ERC721/ERC721.sol",
+          "label": "_tokenOwner",
+          "astId": 839,
+          "type": "t_mapping<t_address>",
+          "src": "774:48:13"
+        },
+        {
+          "contract": "ERC721",
+          "path": "openzeppelin-eth/contracts/token/ERC721/ERC721.sol",
+          "label": "_tokenApprovals",
+          "astId": 843,
+          "type": "t_mapping<t_address>",
+          "src": "878:52:13"
+        },
+        {
+          "contract": "ERC721",
+          "path": "openzeppelin-eth/contracts/token/ERC721/ERC721.sol",
+          "label": "_ownedTokensCount",
+          "astId": 847,
+          "type": "t_mapping<t_uint256>",
+          "src": "988:54:13"
+        },
+        {
+          "contract": "ERC721",
+          "path": "openzeppelin-eth/contracts/token/ERC721/ERC721.sol",
+          "label": "_operatorApprovals",
+          "astId": 853,
+          "type": "t_mapping<t_bool>",
+          "src": "1097:73:13"
+        },
+        {
+          "contract": "ERC721",
+          "path": "openzeppelin-eth/contracts/token/ERC721/ERC721.sol",
+          "label": "______gap",
+          "astId": 1394,
+          "type": "t_array:50<t_uint256>",
+          "src": "11668:29:13"
+        },
+        {
+          "contract": "ERC721Metadata",
+          "path": "openzeppelin-eth/contracts/token/ERC721/ERC721Metadata.sol",
+          "label": "_name",
+          "astId": 1411,
+          "type": "t_string",
+          "src": "266:20:14"
+        },
+        {
+          "contract": "ERC721Metadata",
+          "path": "openzeppelin-eth/contracts/token/ERC721/ERC721Metadata.sol",
+          "label": "_symbol",
+          "astId": 1413,
+          "type": "t_string",
+          "src": "313:22:14"
+        },
+        {
+          "contract": "ERC721Metadata",
+          "path": "openzeppelin-eth/contracts/token/ERC721/ERC721Metadata.sol",
+          "label": "_tokenURIs",
+          "astId": 1417,
+          "type": "t_mapping<t_string>",
+          "src": "381:45:14"
+        },
+        {
+          "contract": "ERC721Metadata",
+          "path": "openzeppelin-eth/contracts/token/ERC721/ERC721Metadata.sol",
+          "label": "______gap",
+          "astId": 1546,
+          "type": "t_array:50<t_uint256>",
+          "src": "2824:29:14"
+        },
+        {
+          "contract": "MinterRole",
+          "path": "openzeppelin-eth/contracts/access/roles/MinterRole.sol",
+          "label": "_minters",
+          "astId": 326,
+          "type": "t_struct<Roles.Role>",
+          "src": "271:27:7"
+        },
+        {
+          "contract": "MinterRole",
+          "path": "openzeppelin-eth/contracts/access/roles/MinterRole.sol",
+          "label": "______gap",
+          "astId": 425,
+          "type": "t_array:50<t_uint256>",
+          "src": "1081:29:7"
+        },
+        {
+          "contract": "ERC721MetadataMintable",
+          "path": "openzeppelin-eth/contracts/token/ERC721/ERC721MetadataMintable.sol",
+          "label": "______gap",
+          "astId": 1616,
+          "type": "t_array:50<t_uint256>",
+          "src": "1040:29:15"
+        },
+        {
+          "contract": "DaoVinciToken",
+          "path": "contracts/DaoVinciToken.sol",
+          "label": "proxyRegistryAddress",
+          "astId": 102,
+          "type": "t_address",
+          "src": "200:28:2"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": []
+      }
+    }
+  },
+  "solidityLibs": {},
+  "proxies": {
+    "zepkit/DaoVinciToken": [
+      {
+        "address": "0x100A1698c3fBb4a1F3B2ED74B5e39741aD233e89",
+        "version": "0.1.0",
+        "implementation": "0xd2dD37Df1520f107473DE13700b399154a54CC43"
+      }
+    ]
+  },
+  "zosversion": "2.2",
+  "version": "0.1.0",
+  "proxyAdmin": {
+    "address": "0xC4739107F597D0Dd8c9633132829C3Ca98Ec59eC"
+  }
+}

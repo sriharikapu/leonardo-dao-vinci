@@ -2,8 +2,6 @@ const path = require("path");
 require('dotenv').config();
 const mnemonic = process.env.MNENOMIC;
 const HDWalletProvider = require("truffle-hdwallet-provider");
-// Create your own key for Production environments (https://infura.io/)
-const INFURA_ID = 'd6760e62b67f4937ba1ea2691046f06d';
 
 module.exports = {
   // See <http://truffleframework.com/docs/advanced/configuration>
@@ -34,7 +32,7 @@ module.exports = {
     rinkeby: {
       provider: () => new HDWalletProvider(process.env.MNENOMIC, "https://rinkeby.infura.io/v3/" + process.env.INFURA_API_KEY),
       network_id: 4,
-      gas: 3000000,
+      gas: 6000000,
       gasPrice: 10000000000
     },
     // main ethereum network(mainnet)

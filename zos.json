@@ -2,5 +2,8 @@
   "zosversion": "2.2",
   "name": "zepkit",
   "version": "0.1.0",
-  "contracts": {}
+  "contracts": {
+    "ProxyRegistry": "ProxyRegistry",
+    "DaoVinciToken": "DaoVinciToken"
+  }
 }
