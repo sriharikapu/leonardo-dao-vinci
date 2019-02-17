@@ -3,7 +3,7 @@ import { Card, Box, Flex, Image, Heading, TextButton } from "rimble-ui";
 import { apiUrl } from "./../../constants";
 
 
-const roundNumber = 6;
+const roundNumber = 10;
 class CardsUI extends Component {
   constructor(props) {
     super(props);
@@ -50,7 +50,7 @@ class CardsUI extends Component {
             mr={4}
             height={"auto"}
           >
-            Next
+            <i className="fas fa-thumbs-down fa-3x"></i>
           </TextButton>
           <TextButton
             onClick={this.handleClick}
@@ -59,7 +59,7 @@ class CardsUI extends Component {
             style={{ marginLeft: "auto" }}
             on
           >
-            Like
+            <i class="fas fa-heart fa-3x"></i>
           </TextButton>
         </Flex>
       </Card>
@@ -97,8 +97,9 @@ export default class Voter extends Component {
     //TODO remove hardcoded num array
     return (
       <div style={{ height: "80vh", position: "relative" }}>
-        {[1,2,3,4,5,6].map(num => {
-            return( <CardsUI    num={num} 
+        {[1,2,3,4,5,6, 7, 8, 9, 10].map(num => {
+            return( <CardsUI    key={num}
+                                num={num} 
                                 rightClick={this.rightClick} 
                                 sendVotes={this.sendVotes} />)
             }
