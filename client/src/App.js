@@ -7,7 +7,6 @@ import Instructions from "./components/Instructions/index.js";
 import { Loader } from 'rimble-ui';
 import Voter from './components/Voter/Voter';
 import {apiUrl }from './constants.js';
-import axios from 'axios';
 import styles from './App.module.scss';
 import Profile from './components/Profile/Profile.js';
 import Team from './components/Team/Team.js';
